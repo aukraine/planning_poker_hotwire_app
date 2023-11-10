@@ -1,10 +1,11 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: %i[show destroy]
+  before_action :set_room, only: [:show, :destroy, :reset, :reveal]
 
   def show; end
-
   def index = @rooms = Room.all
   def new = @room = Room.new
+  def reset = @room.members.update_all estimation: nil
+  def reveal; end
 
   def create
     @room = Room.new(room_params)
