@@ -1,25 +1,23 @@
-# planning_poker_hotwire_app
+# Planning PokerHotwire App
+
 Planning Poker App based on Hotwire technology
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## How to run project locally
 
-Things you may want to cover:
+**1. after cloning repo install all dependencies**
+> bundle install
 
-* Ruby version
+**2. copy development secret key (it should be shared via some secret manager tool instead)**
+> cp config/master.key.template config/master.key
 
-* System dependencies
+**3. migrate Data Base**
+> rails db:migrate
 
-* Configuration
+**4. substitute DB with default data**
+> rails db:seed --trace
 
-* Database creation
+**6. precompile assets**
+> SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**6. run the server**
+> rails s
