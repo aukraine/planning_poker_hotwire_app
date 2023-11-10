@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_09_223851) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_10_094122) do
+  create_table "members", force: :cascade do |t|
+    t.integer "room_id", null: false
+    t.string "name"
+    t.integer "estimation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_members_on_room_id"
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "members", "rooms"
 end
