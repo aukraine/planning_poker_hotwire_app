@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:show, :index, :new, :create, :destroy]
 
   resources :members, only: [:new, :create]
+  resources :estimations, only: [:create]
 end
