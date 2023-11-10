@@ -2,6 +2,9 @@
 
 Planning Poker App based on Hotwire technology
 
+## Video Demonstration
+[screencast.mov](app%2Fdocs%2Fscreencast.mov)
+
 ## How to run project locally
 
 **1. after cloning repo install all dependencies**
