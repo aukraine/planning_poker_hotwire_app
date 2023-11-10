@@ -3,7 +3,7 @@
 Planning Poker App based on Hotwire technology
 
 ## Video Demonstration
-[screencast.mov](app%2Fdocs%2Fscreencast.mov)
+![screencast.gif](docs%2Fscreencast.gif)
 
 ## How to run project locally
 
