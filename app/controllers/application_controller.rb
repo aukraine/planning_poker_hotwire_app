@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-  # include ActionView::RecordIdentifier
-
   helper_method :current_member
 
   def current_member
